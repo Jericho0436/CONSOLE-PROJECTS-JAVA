@@ -1,0 +1,80 @@
+//Activity No.2 java Iteration Statements
+import java.util.*;
+
+class Activity2{
+    public static void main(String[] args){
+        
+        //Scanner
+        Scanner in = new Scanner(System.in);
+        
+        //Selecting Choice/Menu
+        System.out.print("=========================================\n");
+        System.out.print("------(Menu)----------(Price)----\n");
+        System.out.print("---A. Hamsilog   ----- (P50)-----\n");
+        System.out.print("---B. Longsilog  ----- (P60)-----\n");
+        System.out.print("---C. Chicksilog ----- (P70)-----\n");
+        System.out.print("---D. Hotsilog   ----- (P70)-----\n");
+        System.out.print("=========================================\n");
+        
+         //Initialization. 
+        String answer;
+        int total;
+        char choice;
+        
+        //Implementing Iteration Statement in Java doWhile loop
+        //User Input
+        do {
+        System.out.print("---Select Letter of your Choice---:");
+         choice = in.next(). charAt(0);
+        
+        switch (choice)
+        {
+            case 'A':
+                System.out.println("\n---You've Ordered a Hamsilog (P50)---");
+                break;
+                
+            case 'B':
+                System.out.println("\n---You've Ordered a Longsilog P60)---");
+                break;
+            
+            case 'C':
+                System.out.println("\n---You've Ordered a Chicksilog (P70)---");
+                break;
+            
+            case 'D':
+                System.out.println("\n---You've Ordered a Hotsilog (P70)---");            
+                break;
+            
+            default: 
+                System.out.print("Invalid Output\n");
+        }
+        
+        //Input Price of Food/Meal
+        System.out.print("=========================================\n");
+        System.out.print("---Enter the Price of Meal---:");
+        int price = in.nextInt();
+        
+        //Input amount of user cash
+        System.out.print("---Input Amount of Your Cash---:");
+        int cash = in.nextInt();
+        
+         //calculating cash, price, and change
+        total = cash - price;
+        System.out.printf("---Your Changed is (%d) pesos---\n", total); 
+        
+        //asking the user if want to select another choice/menu
+        System.out.print("=========================================");
+        System.out.print("\nYou want to choose another menu? Yes or No\n");
+        answer = in.next();
+        System.out.print("=========================================\n");
+        
+        }
+        //Terminating Program 
+        while (answer.equals("Yes"));
+        {
+        System.out.print("----------THANK YOU FOR ORDERING----------\n");
+        System.out.print("------------END OF TRANSACTION------------");
+        }
+    }
+}
+    

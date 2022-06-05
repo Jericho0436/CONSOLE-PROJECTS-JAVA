@@ -1,0 +1,103 @@
+﻿import java.util.Scanner;
+
+public class Main {
+    
+    public static void main(String[] args) {
+     
+    Scanner in = new Scanner (System.in);
+    
+      //Printing menu
+    System.out.println("\nMenu: ");
+    System.out.println("A. Okinawa Milktea - - - - - P50"); 
+    System.out.println("B. Red velvet Milktea - - - - - P60");
+    System.out.println("C. Dark Chocolate - - - - - P70");
+    System.out.println("D. Rocky Road - - - - - P70 \n");
+   
+      //Initialization. 
+      
+  String choice;
+      
+       // Asking user to input order.
+      
+   System.out.print("\nEnter your Order: ");
+   choice = in.next();
+      
+      //If the customer choice is not on the menu
+       
+  while ( !choice.equals("A") && !choice.equals("B") && !choice.equals("C") && !choice.equals("D"))
+    {
+         System.out.println("\nPick another order!");
+         System.out.print("Please Enter Another Order: ");
+         choice = in.next();
+      }  
+      
+      
+      //Switch statements for each order. 
+        switch (choice)
+        {
+            case "A":
+                System.out.println("\nYour order is: Okinawa Milktea - - - - - P50");
+                break;
+                
+            case "B":
+                System.out.println("\nYour order is: Red velvet Milktea - - - - - P60");
+                break;
+            
+            case "C":
+                System.out.println("\nYour order is: Dark Chocolate - - - - - P70");
+                break;
+            
+            case "D":
+                System.out.println("\nYour order is: Rocky Road - - - - - P70");            
+                break;
+            
+            default: 
+                System.out.print("Invalid Output");
+                      
+       } 
+  
+  
+        System.out.print("\nEnter your cash: ");
+        int cash = in.nextInt(); 
+  
+        
+        int diff;
+        
+        
+         switch (choice)
+        {
+            case "A":
+                
+                diff = cash - 50;
+                System.out.println("\nYour change is: " +diff);
+                break;
+                
+            case "B":
+                
+                diff = cash - 60;
+                System.out.println("\nYour change is: " +diff);
+                break;
+            
+            case "C":
+                
+                diff = cash - 70;
+                System.out.println("\nYour change is: " +diff);
+                break;
+            
+            case "D":
+                
+                diff = cash - 70	;
+                System.out.println("\nYour change is: " +diff);            
+                break;
+            
+            default: 
+                System.out.print("Invalid Output");         
+                
+                
+            }           
+                 
+               System.out.println("\nThankyou for purchasing!");
+               System.out.print("Come and order again!");
+    }
+    
+}

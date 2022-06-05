@@ -1,0 +1,38 @@
+// Java program for implementation of Merge and Heap sort
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class MergeAndHeap{
+    public static void main(String args[ ]){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the size of the array:");
+    // Prints the array 
+    int size = scan.nextInt();
+    int[] array = new int[size];
+    int[] sort_array = new int[size];
+    System.out.println("Enter the elements:");
+    for (int i = 0; i < size;i++) {
+        sort_array[i] = scan.nextInt();
+    }
+    for (int i = 0; i < size; i++){
+        array[i] = sort_array[i];
+    }
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (sort_array[j] > sort_array[j + 1]) {
+            int add = sort_array[j];
+            sort_array[j] = sort_array[j + 1];
+            sort_array[j + 1] = add;
+        }
+    }
+}
+// Print Unsorted and Sorted Array
+System.out.print("The Unsorted Array: ");
+for (int i = 0; i < size; i++){
+    System.out.print(array[i] + " ");}
+    
+    System.out.print("\nThe Sorted Array: ");
+    for(int i = 0; i <size; i++){
+        System.out.print(sort_array[i] + " ");}
+    }
+}
